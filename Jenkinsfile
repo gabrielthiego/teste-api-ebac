@@ -10,12 +10,13 @@ pipeline {
 
         stage('Instalar Dependências') {
             steps {
-                bat 'npm install' 
+                bat 'npm install'
+            }
         }
 
         stage('Executar Testes') {
             steps {
-                bat 'npm test'  
+                bat 'npm test'
             }
         }
     }
