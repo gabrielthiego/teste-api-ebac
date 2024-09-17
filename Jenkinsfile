@@ -1,19 +1,21 @@
 pipeline {
     agent any
+
     stages {
-        stage('Clonar o repositorio') {
+        stage('Clonar o Repositório') {
             steps {
-                git branch: 'main', url: 'https://github.com/gabrielthiego/teste-api-ebac'
+                git 'https://github.com/gabrielthiego/teste-api-ebac'
             }
         }
-        stage('Instalar dependencias') {
+
+        stage('Instalar Dependências') {
             steps {
-                sh 'npm install'
-            }
+                bat 'npm install' 
         }
+
         stage('Executar Testes') {
             steps {
-                sh 'NO_COLOR=1 npm run cy:run'
+                bat 'npm test'  
             }
         }
     }
