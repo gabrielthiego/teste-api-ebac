@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1\"mocha",
-    "start": "npx serverest",
-    "cy:run": "npx cypress run\"cypress run"
-    
-    
+    "test": "mocha",  
+    "start": "npx serverest", 
+    "cy:run": "npx cypress run"  
   },
   "keywords": [],
   "author": "",
