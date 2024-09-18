@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha './test/exemple.js'",
     "start": "npx serverest",
     "cy:run": "npx cypress run"
   },
