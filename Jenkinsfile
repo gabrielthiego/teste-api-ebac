@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage('Iniciar Servidor') {
+            steps {
+                bat 'start /b npm start'
+            }
+        }
+
         stage('Clonar o Repositório') {
             steps {
                 git 'https://github.com/gabrielthiego/teste-api-ebac'
