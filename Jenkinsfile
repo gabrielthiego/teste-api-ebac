@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Iniciar Servidor') {
+        stage('Clonar o Repositório') { 
             steps {
-                bat 'start /b npm start'
+                git branch: 'main', url: 'https://github.com/gabrielthiego/teste-api-ebac'
             }
         }
 
-        stage('Clonar o Repositório') {
+        stage('Iniciar Servidor') {
             steps {
-                git 'https://github.com/gabrielthiego/teste-api-ebac'
+                bat 'start /b npm start'
             }
         }
 
